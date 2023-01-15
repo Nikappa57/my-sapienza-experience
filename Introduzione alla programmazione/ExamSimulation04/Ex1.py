@@ -1,5 +1,5 @@
 def Ex1(s):
-    max_c = 0
+    max_c = 1
     c = 1
 
     for i in range(1, len(s)):
