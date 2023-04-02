@@ -138,3 +138,5 @@ dmypy.json
 Introduzione alla programmazione/LabPython12/REGISTRAstudente.py
 Introduzione alla programmazione/LabPython12/VeroFalso.py
 Complementi di programmazione/a.out
+*.json
+*.gch
