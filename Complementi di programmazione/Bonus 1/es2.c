@@ -1,31 +1,25 @@
 #include <stdlib.h>
 
-int	find_max_col(float **mat, int rows, int col)
+float	max_col(float **mat, int rows, int col)
 {
-	int	max_index = 0;
-	
-	for (int i = 0; i < rows; i++)
-    	if (mat[i][col] > mat[max_index][col])
-          max_index = i;
-    return (max_index);
-}
-
-float	*arr_alloc(int len)
-{
-	float	*arr;
+	int max_val = mat[0][col];
   
- 	if (!(arr = (float *) malloc(sizeof(float) * len)))
-    	return (NULL);
-	return (arr);
+  	for (int r = 1; r < rows; r++)
+    	if (mat[r][col] > max_val)
+          max_val = mat[r][col];
+ 	return (max_val);
 }
 
 float * massimi(float **mat, int rows, int cols) {
-	float	*max;
   
-	if (!(max = arr_alloc(cols)))
-      return (NULL);
-	for (int i = 0; i < cols; i++)
-      max[i] = mat[find_max_col(mat, rows, i)][i];
-  	return (max);
-	
+  if ((mat == NULL) || (rows <= 0) || (cols <= 0))
+		return (NULL);
+    
+  float *ret = (float *) malloc(sizeof(float) * cols);
+  
+  for (int c = 0; c < cols; c++)
+  {
+  	ret[c] = max_col(mat, rows, c);
+  }
+  return (ret);
 }
