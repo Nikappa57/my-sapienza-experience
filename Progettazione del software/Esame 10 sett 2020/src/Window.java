@@ -20,9 +20,9 @@ import javax.swing.*;
 public class Window extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
-	JLabel server_lable;
+	JLabel server_label;
 	JTextArea server_input;
-	JLabel port_lable;
+	JLabel port_label;
 	JTextArea port_input;
 	JButton connect_btn;
 	JButton disconnect_btn;
@@ -53,9 +53,9 @@ public class Window extends JFrame {
 		
 		this.add(btn_panel, BorderLayout.NORTH);
 		
-		server_lable = new JLabel("Server Address");
+		server_label = new JLabel("Server Address");
 		server_input = new JTextArea(1, 10);
-		port_lable = new JLabel("Port");
+		port_label = new JLabel("Port");
 		port_input = new JTextArea(1, 5);
 		connect_btn = new JButton("Connect");
 		disconnect_btn = new JButton("Disconnect");
@@ -65,9 +65,9 @@ public class Window extends JFrame {
 		disconnect_btn.addActionListener(listener);
 		
 		btn_panel.setLayout(new FlowLayout());
-		btn_panel.add(server_lable);
+		btn_panel.add(server_label);
 		btn_panel.add(server_input);
-		btn_panel.add(port_lable);
+		btn_panel.add(port_label);
 		btn_panel.add(port_input);
 		btn_panel.add(connect_btn);
 		btn_panel.add(disconnect_btn);
