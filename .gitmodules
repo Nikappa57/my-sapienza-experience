@@ -1,0 +1,3 @@
+[submodule "AMPL"]
+	path = AMPL
+	url = https://github.com/Nikappa57/AMPL.git
